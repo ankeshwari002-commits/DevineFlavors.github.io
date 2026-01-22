@@ -1,293 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Devine Flavors | Premium Spices & Masala</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Indian Spices - Authentic & Pure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <meta name="description" content="Devine Flavors - Premium quality spices, masala and homemade blends. Order via WhatsApp." />
-  <link rel="stylesheet" href="style.css" />
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .products {
+            padding: 4rem 0;
+            background: #f9f5f0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #8B4513;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-name {
+            font-size: 1.5rem;
+            color: #8B4513;
+            margin-bottom: 1rem;
+        }
+
+        .product-sizes {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .size-badge {
+            background: #f0e6d2;
+            padding: 0.3rem 0.8rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .product-features {
+            list-style: none;
+        }
+
+        .product-features li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .product-features li:before {
+            content: "✓";
+            color: #6B8E23;
+            font-weight: bold;
+        }
+
+        .about {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: #8B4513;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .contact {
+            padding: 4rem 0;
+            background: #f9f5f0;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h3 {
+            color: #8B4513;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: #D2691E;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .forms-section {
+            margin-top: 4rem;
+        }
+
+        .forms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .form-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .form-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .form-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-card h3 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .form-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .form-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .form-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-  <!-- Header -->
-  <header class="header">
-    <div class="container nav">
-      <div class="logo">
-        <span class="brand">Devine</span><span class="brand2">Flavors</span>
-      </div>
-
-      <nav class="menu">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#pricing">Price List</a>
-        <a href="#payment">Payment</a>
-        <a href="#forms">Forms</a>
-        <a href="https://infiniteinsights2025.blogspot.com/" target="_blank">Blog</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <a class="btn btn-primary" href="#contact">Order Now</a>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="tag">Premium Spices • Pure Taste • Fresh Aroma</p>
-        <h1>Devine Flavors<br/>Spices & Masala</h1>
-        <p class="sub">
-          Fresh, hygienic and premium quality spices. Perfect for daily cooking and special recipes.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#products">View Products</a>
-          <a class="btn btn-outline" href="#pricing">Price List</a>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">🌶️ Premium Spices</div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hero" id="home">
+                <h1>Authentic Indian Spices</h1>
+                <p>Pure, Fresh & Traditionally Ground for Your Kitchen</p>
+            </div>
         </div>
+    </header>
 
-        <div class="trust">
-          <div class="trust-box">
-            <h3>100%</h3>
-            <p>Pure & Fresh</p>
-          </div>
-          <div class="trust-box">
-            <h3>Hygienic</h3>
-            <p>Packaging</p>
-          </div>
-          <div class="trust-box">
-            <h3>Fast</h3>
-            <p>WhatsApp Support</p>
-          </div>
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Premium Collection</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1670537994445-a7c8b4a39a4a?w=500&auto=format&fit=crop" alt="Red Chilli Powder" class="product-image" onerror="this.src='https://via.placeholder.com/500x250/D2691E/ffffff?text=Red+Chilli+Powder'">
+                    <div class="product-info">
+                        <h3 class="product-name">🌶️ Red Chilli Powder</h3>
+                        <div class="product-sizes">
+                            <span class="size-badge">100g</span>
+                            <span class="size-badge">200g</span>
+                            <span class="size-badge">250g</span>
+                            <span class="size-badge">500g</span>
+                        </div>
+                        <ul class="product-features">
+                            <li>Bold taste, rich colour & strong aroma</li>
+                            <li>No artificial colour</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=500&auto=format&fit=crop" alt="Turmeric Powder" class="product-image" onerror="this.src='https://via.placeholder.com/500x250/FFD700/ffffff?text=Turmeric+Powder'">
+                    <div class="product-info">
+                        <h3 class="product-name">🌻 Turmeric Powder</h3>
+                        <div class="product-sizes">
+                            <span class="size-badge">100g</span>
+                            <span class="size-badge">200g</span>
+                            <span class="size-badge">250g</span>
+                            <span class="size-badge">500g</span>
+                        </div>
+                        <ul class="product-features">
+                            <li>Pure haldi for daily cooking</li>
+                            <li>Fresh & hygienic grinding</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1599639832848-1029335c96b2?w=500&auto=format&fit=crop" alt="Coriander Powder" class="product-image" onerror="this.src='https://via.placeholder.com/500x250/8B6914/ffffff?text=Coriander+Powder'">
+                    <div class="product-info">
+                        <h3 class="product-name">🌿 Coriander Powder</h3>
+                        <div class="product-sizes">
+                            <span class="size-badge">100g</span>
+                            <span class="size-badge">200g</span>
+                            <span class="size-badge">250g</span>
+                            <span class="size-badge">500g</span>
+                        </div>
+                        <ul class="product-features">
+                            <li>Freshly ground for best flavour</li>
+                            <li>Premium raw material</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1596544736098-d092a82adb4f?w=500&auto=format&fit=crop" alt="Jeera Powder" class="product-image" onerror="this.src='https://via.placeholder.com/500x250/9B7653/ffffff?text=Jeera+Powder'">
+                    <div class="product-info">
+                        <h3 class="product-name">🌾 Jeera Powder</h3>
+                        <div class="product-sizes">
+                            <span class="size-badge">100g</span>
+                            <span class="size-badge">200g</span>
+                            <span class="size-badge">250g</span>
+                            <span class="size-badge">500g</span>
+                        </div>
+                        <ul class="product-features">
+                            <li>Strong cumin flavour & digestive friendly</li>
+                            <li>Pure taste, no mixing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1596544736098-d092a82adb4f?w=500&auto=format&fit=crop" alt="Garam Masala" class="product-image" onerror="this.src='https://via.placeholder.com/500x250/A0522D/ffffff?text=Garam+Masala'">
+                    <div class="product-info">
+                        <h3 class="product-name">🍛 Garam Masala</h3>
+                        <div class="product-sizes">
+                            <span class="size-badge">100g</span>
+                            <span class="size-badge">200g</span>
+                            <span class="size-badge">250g</span>
+                            <span class="size-badge">500g</span>
+                            <span class="size-badge">1KG</span>
+                        </div>
+                        <ul class="product-features">
+                            <li>For rich, flavorful dishes</li>
+                            <li>Authentic homemade blend</li>
+                            <li>Fresh ground & premium</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1599639832848-1029335c96b2?w=500&auto=format&fit=crop" alt="Sabzi Masala" class="product-image" onerror="this.src='https://via.placeholder.com/500x250/CD853F/ffffff?text=Sabzi+Masala'">
+                    <div class="product-info">
+                        <h3 class="product-name">🥬 Sabzi Masala</h3>
+                        <div class="product-sizes">
+                            <span class="size-badge">100g</span>
+                            <span class="size-badge">250g</span>
+                            <span class="size-badge">1KG</span>
+                        </div>
+                        <ul class="product-features">
+                            <li>For daily vegetables</li>
+                            <li>Balanced blend</li>
+                            <li>Fresh aroma, 100% pure</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1596544736098-d092a82adb4f?w=500&auto=format&fit=crop" alt="Special Kitchen Mix" class="product-image" onerror="this.src='https://via.placeholder.com/500x250/B8860B/ffffff?text=Special+Kitchen+Mix'">
+                    <div class="product-info">
+                        <h3 class="product-name">✨ Special Kitchen Mix</h3>
+                        <div class="product-sizes">
+                            <span class="size-badge">100g</span>
+                            <span class="size-badge">200g</span>
+                            <span class="size-badge">250g</span>
+                            <span class="size-badge">500g</span>
+                        </div>
+                        <ul class="product-features">
+                            <li>Signature masala product</li>
+                            <li>Balanced spices & herbs</li>
+                            <li>Aromatic & versatile mix</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="hero-card">
-        <div class="card">
-          <h2>🔥 Best Sellers</h2>
-          <ul>
-            <li>Garam Masala</li>
-            <li>Red Chilli Powder</li>
-            <li>Turmeric Powder</li>
-            <li>Coriander Powder</li>
-            <li>Special Kitchen Mix</li>
-          </ul>
-          <p class="note">For orders & delivery, contact us on WhatsApp.</p>
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Why Choose Our Spices?</h2>
+                    <p>We bring you the finest quality Indian spices, freshly ground with traditional methods to preserve authentic flavours and aromas. Each product is carefully sourced and prepared with hygiene as our top priority.</p>
+                    <p>Our commitment to purity means no artificial colours, no mixing, and only premium raw materials. From everyday turmeric to our signature garam masala blend, every spice is crafted to elevate your cooking.</p>
+                    <p>Whether you're preparing daily vegetables or creating elaborate feasts, our range of products ensures authentic taste in every dish.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1596040033229-a0b3b46fe6d6?w=600" alt="Spices" style="width: 100%; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="title">About Devine Flavors</h2>
-      <p class="text">
-        Devine Flavors is focused on bringing <b>authentic taste</b> and <b>fresh aroma</b> in every pack.
-        Our spices are carefully selected, cleaned and packed with hygiene.
-      </p>
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <a href="tel:9993907054">9993907054</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email Us</h3>
+                    <a href="mailto:ankeshwari002@gmail.com">ankeshwari002@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📝</div>
+                    <h3>Visit Our Blog</h3>
+                    <a href="https://infiniteinsights2025.blogspot.com" target="_blank">Infinite Insights</a>
+                </div>
+            </div>
 
-      <div class="features">
-        <div class="feature">
-          <h3>✅ Premium Quality</h3>
-          <p>Handpicked ingredients and strong aroma.</p>
+            <div class="forms-section">
+                <h3 style="text-align: center; font-size: 2rem; color: #8B4513; margin: 3rem 0 2rem;">Send Us a Message</h3>
+                <div class="forms-grid">
+                    <div class="form-card">
+                        <div class="form-icon">💬</div>
+                        <h3>Product Inquiry</h3>
+                        <p>Have questions about our products or want to place an order?</p>
+                        <a href="https://forms.gle/kH39Wn1ZygcDToXU8" target="_blank" class="form-button">Send Inquiry</a>
+                    </div>
+                    <div class="form-card">
+                        <div class="form-icon">⭐</div>
+                        <h3>Share Feedback</h3>
+                        <p>We'd love to hear about your experience with our spices!</p>
+                        <a href="https://forms.gle/9dQHqGRAQCBsqUbh9" target="_blank" class="form-button">Give Feedback</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="feature">
-          <h3>✅ Hygienic Packing</h3>
-          <p>Clean processing & sealed packaging.</p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Premium Spices. All rights reserved. | Authentic Indian Spices</p>
         </div>
-        <div class="feature">
-          <h3>✅ Homemade Blend</h3>
-          <p>Special masala mixes with rich taste.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Products -->
-  <section id="products" class="section section-light">
-    <div class="container">
-      <h2 class="title">Our Products</h2>
-      <p class="text center">Spices & Masala range with best aroma and quality.</p>
-
-      <!-- NOTE: Upload images in repo: /images folder -->
-      <div class="grid">
-
-        <div class="product">
-          <img src="images/turmeric.png" alt="Turmeric Powder">
-          <h3>Turmeric Powder</h3>
-          <p>Pure haldi for daily cooking.</p>
-          <span class="pill">Available</span>
-        </div>
-
-        <div class="product">
-          <img src="images/redchilli.png" alt="Red Chilli Powder">
-          <h3>Red Chilli Powder</h3>
-          <p>Bold taste, rich colour & strong aroma.</p>
-          <span class="pill">Best Seller</span>
-        </div>
-
-        <div class="product">
-          <img src="images/coriander.png" alt="Coriander Powder">
-          <h3>Coriander Powder</h3>
-          <p>Freshly ground for best flavour.</p>
-          <span class="pill">Available</span>
-        </div>
-
-        <div class="product">
-          <img src="images/jeera.png" alt="Jeera Powder">
-          <h3>Jeera Powder</h3>
-          <p>Strong cumin flavour & digestive friendly.</p>
-          <span class="pill">Available</span>
-        </div>
-
-        <div class="product">
-          <img src="images/garammasala.png" alt="Garam Masala">
-          <h3>Garam Masala</h3>
-          <p>Authentic homemade blend.</p>
-          <span class="pill">Popular</span>
-        </div>
-
-        <div class="product">
-          <img src="images/sabjimasala.png" alt="Sabji Masala">
-          <h3>Sabji Masala</h3>
-          <p>Balanced blend for daily vegetables.</p>
-          <span class="pill">Popular</span>
-        </div>
-
-        <div class="product">
-          <img src="images/kitchenmix.png" alt="Special Kitchen Mix">
-          <h3>Special Kitchen Mix</h3>
-          <p>Signature masala product.</p>
-          <span class="pill">New</span>
-        </div>
-
-      </div>
-
-      <div class="center mt">
-        <a class="btn btn-primary" href="#contact">Order on WhatsApp</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Price List -->
-  <section class="section" id="pricing">
-    <div class="container">
-      <h2 class="title">Price List</h2>
-      <p class="text center">Market rate ke according updated price list (100g to 5kg).</p>
-
-      <div class="price-table">
-        <div class="price-row head">
-          <div>Product</div><div>100g</div><div>200g</div><div>250g</div><div>500g</div><div>1kg</div><div>5kg</div>
-        </div>
-
-        <div class="price-row"><div>Turmeric Powder</div><div>₹30</div><div>₹55</div><div>₹65</div><div>₹120</div><div>₹220</div><div>₹1050</div></div>
-        <div class="price-row"><div>Red Chilli Powder</div><div>₹45</div><div>₹85</div><div>₹105</div><div>₹195</div><div>₹360</div><div>₹1750</div></div>
-        <div class="price-row"><div>Coriander Powder</div><div>₹35</div><div>₹65</div><div>₹80</div><div>₹150</div><div>₹270</div><div>₹1300</div></div>
-        <div class="price-row"><div>Jeera Powder</div><div>₹80</div><div>₹155</div><div>₹190</div><div>₹360</div><div>₹690</div><div>₹3350</div></div>
-        <div class="price-row"><div>Garam Masala</div><div>₹70</div><div>₹135</div><div>₹165</div><div>₹320</div><div>₹600</div><div>₹2900</div></div>
-        <div class="price-row"><div>Sabji Masala</div><div>₹55</div><div>₹105</div><div>₹130</div><div>₹250</div><div>₹460</div><div>₹2200</div></div>
-        <div class="price-row"><div>Special Kitchen Mix</div><div>₹60</div><div>₹115</div><div>₹140</div><div>₹270</div><div>₹490</div><div>₹2350</div></div>
-      </div>
-
-      <p class="small center mt">Note: Prices may change based on season & raw material cost.</p>
-    </div>
-  </section>
-
-  <!-- Payment -->
-  <section class="section section-light" id="payment">
-    <div class="container">
-      <h2 class="title">Payment Methods</h2>
-      <p class="text center">Easy & secure payment options available.</p>
-
-      <div class="pay-grid">
-        <div class="pay-card">✅ UPI (GPay / PhonePe / Paytm)</div>
-        <div class="pay-card">✅ Bank Transfer</div>
-        <div class="pay-card">✅ WhatsApp Order Confirmation</div>
-        <div class="pay-card">✅ Cash on Delivery (if available)</div>
-      </div>
-
-      <p class="small center mt">UPI ID / QR aap later add kar sakti ho.</p>
-    </div>
-  </section>
-
-  <!-- Forms -->
-  <section class="section" id="forms">
-    <div class="container">
-      <h2 class="title">Inquiry & Feedback</h2>
-      <p class="text center">Fill the form and we will contact you soon.</p>
-
-      <div class="forms-grid">
-
-        <div class="form-card">
-          <h3>📩 Inquiry Form</h3>
-          <p class="small">For price list, bulk order, delivery & product inquiry.</p>
-          <a class="btn btn-primary" target="_blank" href="https://forms.gle/kH39Wn1ZygcDToXU8">Open Inquiry Form</a>
-        </div>
-
-        <div class="form-card">
-          <h3>⭐ Feedback Form</h3>
-          <p class="small">Share your review and help us improve.</p>
-          <a class="btn btn-outline" target="_blank" href="https://forms.gle/9dQHqGRAQCBsqUbh9">Open Feedback Form</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section section-light">
-    <div class="container">
-      <h2 class="title">Contact & Order</h2>
-      <p class="text center">
-        For orders, price list and delivery details, message us on WhatsApp.
-      </p>
-
-      <div class="contact-box">
-        <div>
-          <h3>📍 Business Name</h3>
-          <p>Devine Flavors</p>
-        </div>
-
-        <div>
-          <h3>📞 Phone / WhatsApp</h3>
-          <p><a href="tel:+919993907054">+91 99939 07054</a></p>
-        </div>
-
-        <div>
-          <h3>📧 Email</h3>
-          <p><a href="mailto:ankeshwari002@gmail.com">ankeshwari002@gmail.com</a></p>
-        </div>
-      </div>
-
-      <div class="center mt">
-        <a class="btn btn-primary" target="_blank"
-           href="https://wa.me/919993907054?text=Hello%20Devine%20Flavors%2C%20I%20want%20to%20order%20spices.%20Please%20share%20price%20list.">
-          WhatsApp Now
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-flex">
-      <p>© <span id="year"></span> Devine Flavors. All Rights Reserved.</p>
-      <p class="small">Made with ❤ for spice lovers.</p>
-    </div>
-  </footer>
-
-  <!-- Floating WhatsApp Button -->
-  <a class="wa-float" target="_blank"
-     href="https://wa.me/919993907054?text=Hello%20Devine%20Flavors%2C%20I%20want%20to%20order%20spices.%20Please%20share%20price%20list.">
-    WhatsApp
-  </a>
-
-  <script>
-    document.getElementById("year").innerText = new Date().getFullYear();
-  </script>
-
+    </footer>
 </body>
 </html>
