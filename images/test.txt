@@ -1,7 +1,0 @@
-turmeric.png
-redchilli.png
-coriander.png
-jeera.png
-garammasala.png
-sabjimasala.png
-kitchenmix.png
