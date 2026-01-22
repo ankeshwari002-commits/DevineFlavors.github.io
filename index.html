@@ -73,82 +73,145 @@
             opacity: 0.9;
         }
 
-        .products {
-            padding: 4rem 0;
-            background: #f9f5f0;
-        }
+        .<section class="products" id="products">
+  <div class="container">
+    <h2 class="section-title">Our Premium Collection</h2>
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #8B4513;
-        }
+    <div class="product-grid">
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
+      <!-- Red Chilli -->
+      <div class="product-card">
+        <img src="red-chilli-powder.jpg" alt="Red Chilli Powder" class="product-image">
+        <div class="product-info">
+          <h3 class="product-name">🌶️ Red Chilli Powder</h3>
+          <div class="product-sizes">
+            <span class="size-badge">100g</span>
+            <span class="size-badge">200g</span>
+            <span class="size-badge">250g</span>
+            <span class="size-badge">500g</span>
+          </div>
+          <ul class="product-features">
+            <li>Bold taste, rich colour & strong aroma</li>
+            <li>No artificial colour</li>
+          </ul>
+        </div>
+      </div>
 
-        .product-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
+      <!-- Turmeric -->
+      <div class="product-card">
+        <img src="turmeric-powder.jpg" alt="Turmeric Powder" class="product-image">
+        <div class="product-info">
+          <h3 class="product-name">🌻 Turmeric Powder</h3>
+          <div class="product-sizes">
+            <span class="size-badge">100g</span>
+            <span class="size-badge">200g</span>
+            <span class="size-badge">250g</span>
+            <span class="size-badge">500g</span>
+          </div>
+          <ul class="product-features">
+            <li>Pure haldi for daily cooking</li>
+            <li>Fresh & hygienic grinding</li>
+          </ul>
+        </div>
+      </div>
 
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
+      <!-- Coriander -->
+      <div class="product-card">
+        <img src="coriander-powder.jpg" alt="Coriander Powder" class="product-image">
+        <div class="product-info">
+          <h3 class="product-name">🌿 Coriander Powder</h3>
+          <div class="product-sizes">
+            <span class="size-badge">100g</span>
+            <span class="size-badge">200g</span>
+            <span class="size-badge">250g</span>
+            <span class="size-badge">500g</span>
+          </div>
+          <ul class="product-features">
+            <li>Freshly ground for best flavour</li>
+            <li>Premium raw material</li>
+          </ul>
+        </div>
+      </div>
 
-        .product-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
+      <!-- Jeera -->
+      <div class="product-card">
+        <img src="jeera-powder.jpg" alt="Jeera Powder" class="product-image">
+        <div class="product-info">
+          <h3 class="product-name">🌾 Jeera Powder</h3>
+          <div class="product-sizes">
+            <span class="size-badge">100g</span>
+            <span class="size-badge">200g</span>
+            <span class="size-badge">250g</span>
+            <span class="size-badge">500g</span>
+          </div>
+          <ul class="product-features">
+            <li>Strong cumin flavour & digestive friendly</li>
+            <li>Pure taste, no mixing</li>
+          </ul>
+        </div>
+      </div>
 
-        .product-info {
-            padding: 1.5rem;
-        }
+      <!-- Garam Masala -->
+      <div class="product-card">
+        <img src="garam-masala.jpg" alt="Garam Masala" class="product-image">
+        <div class="product-info">
+          <h3 class="product-name">🍛 Garam Masala</h3>
+          <div class="product-sizes">
+            <span class="size-badge">100g</span>
+            <span class="size-badge">200g</span>
+            <span class="size-badge">250g</span>
+            <span class="size-badge">500g</span>
+            <span class="size-badge">1KG</span>
+          </div>
+          <ul class="product-features">
+            <li>For rich, flavorful dishes</li>
+            <li>Authentic homemade blend</li>
+            <li>Fresh ground & premium</li>
+          </ul>
+        </div>
+      </div>
 
-        .product-name {
-            font-size: 1.5rem;
-            color: #8B4513;
-            margin-bottom: 1rem;
-        }
+      <!-- Sabzi Masala -->
+      <div class="product-card">
+        <img src="sabzi-masala.jpg" alt="Sabzi Masala" class="product-image">
+        <div class="product-info">
+          <h3 class="product-name">🥬 Sabzi Masala</h3>
+          <div class="product-sizes">
+            <span class="size-badge">100g</span>
+            <span class="size-badge">250g</span>
+            <span class="size-badge">1KG</span>
+          </div>
+          <ul class="product-features">
+            <li>For daily vegetables</li>
+            <li>Balanced blend</li>
+            <li>Fresh aroma, 100% pure</li>
+          </ul>
+        </div>
+      </div>
 
-        .product-sizes {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
+      <!-- Special Kitchen Mix -->
+      <div class="product-card">
+        <img src="special-kitchen-mix.jpg" alt="Special Kitchen Mix" class="product-image">
+        <div class="product-info">
+          <h3 class="product-name">✨ Special Kitchen Mix</h3>
+          <div class="product-sizes">
+            <span class="size-badge">100g</span>
+            <span class="size-badge">200g</span>
+            <span class="size-badge">250g</span>
+            <span class="size-badge">500g</span>
+          </div>
+          <ul class="product-features">
+            <li>Signature masala product</li>
+            <li>Balanced spices & herbs</li>
+            <li>Aromatic & versatile mix</li>
+          </ul>
+        </div>
+      </div>
 
-        .size-badge {
-            background: #f0e6d2;
-            padding: 0.3rem 0.8rem;
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
+    </div>
+  </div>
+</section>
 
-        .product-features {
-            list-style: none;
-        }
-
-        .product-features li {
-            padding: 0.5rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .product-features li:before {
-            content: "✓";
-            color: #6B8E23;
-            font-weight: bold;
         }
 
         .about {
